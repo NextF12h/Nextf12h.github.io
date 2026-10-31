@@ -19,8 +19,10 @@ comments: false
   api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r"
   order="random"
   volume="0.7"
-  list-folded="true"
+  list-folded="false"
   preload="none"
+  list-max-height="640px"
+  mutex="true"
   fixed="false">
 </meting-js>
 
