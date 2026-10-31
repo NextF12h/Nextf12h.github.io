@@ -8,9 +8,9 @@ comments: false
 常听的那些，扔在这儿。
 
 {% raw %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+<link rel="stylesheet" href="/lib/APlayer.min.css">
+<script src="/lib/APlayer.min.js"></script>
+<script src="/lib/Meting.min.js"></script>
 
 <meting-js
   server="tencent"
@@ -23,4 +23,6 @@ comments: false
   preload="none"
   fixed="false">
 </meting-js>
+
+<noscript>播放器需要 JavaScript。歌单在 <a href="https://y.qq.com/n/ryqq_v2/playlist/9801303096">QQ 音乐</a>。</noscript>
 {% endraw %}
