@@ -9,6 +9,24 @@ comments: false
 
 {% raw %}
 <link rel="stylesheet" href="/lib/APlayer.min.css">
+<style>
+#article-container .aplayer { height: 116px; margin: 18px 0; }
+#article-container .aplayer-pic { width: 116px; height: 116px; }
+#article-container .aplayer-info { padding: 12px 14px; }
+#article-container .aplayer-title { font-size: 17px; font-weight: 600; }
+#article-container .aplayer-author { font-size: 13px; }
+#article-container .aplayer-time { font-size: 12px; }
+#article-container .aplayer-list { max-height: 680px; }
+#article-container .aplayer-list ol { padding: 0; }
+#article-container .aplayer-list ol li { height: 50px; line-height: 50px; font-size: 15px; }
+#article-container .aplayer-list ol li .aplayer-list-index { font-size: 15px; }
+#article-container .aplayer-list ol li .aplayer-list-author { font-size: 12px; }
+@media (max-width: 768px) {
+  #article-container .aplayer { height: 96px; }
+  #article-container .aplayer-pic { width: 96px; height: 96px; }
+  #article-container .aplayer-title { font-size: 15px; }
+}
+</style>
 <script src="/lib/APlayer.min.js"></script>
 <script src="/lib/Meting.min.js"></script>
 
