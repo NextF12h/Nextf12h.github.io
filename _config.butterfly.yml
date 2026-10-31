@@ -13,6 +13,7 @@ menu:
   Bangumis: /bangumis/ || fas fa-video
   Musics: /musics/ || fas fa-music
   Archives: /archives/ || fas fa-archive
+  Memories: /memories/ || fas fa-camera-retro
   # Tags: /tags/ || fas fa-tags
   # Categories: /categories/ || fas fa-folder-open
   # List||fas fa-list:
