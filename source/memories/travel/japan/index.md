@@ -30,19 +30,19 @@ comments: false
     const r = await fetch('/images/memories/' + CAT + '/index.json?t=' + Date.now());
     const rows = await r.json();
     if (!rows.length) { tip.textContent = '这一类还没有照片。'; return; }
-    rows.sort((a, b) => (a.date < b.date ? 1 : -1));
+    rows.sort((a, b) => ((b.date || '') < (a.date || '') ? -1 : (b.date || '') > (a.date || '') ? 1 : 0));
     const groups = {};
     for (const it of rows) {
-      const m = it.date.slice(0, 7);
+      const m = it.date ? it.date.slice(0, 7) : '未标日期';
       (groups[m] = groups[m] || []).push(it);
     }
     let html = '';
     for (const m of Object.keys(groups).sort().reverse()) {
-      html += '<div class="mem-month">' + m.replace('-', ' 年 ') + ' 月</div>';
+      html += '<div class="mem-month">' + (m === '未标日期' ? m : m.replace('-', ' 年 ') + ' 月') + '</div>';
       for (const it of groups[m]) {
-        html += '<div class="mem-item"><div class="mem-time">' + it.date.slice(11) + '</div>' +
+        html += '<div class="mem-item"><div class="mem-time">' + (it.date ? it.date.slice(11) : '') + '</div>' +
           '<div class="mem-card"><img loading="lazy" src="/images/memories/' + CAT + '/' + it.file + '" alt="' + (it.title || '') + '">' +
-          '<div class="mem-date">' + it.date + '</div></div></div>';
+          '<div class="mem-date">' + (it.date || '日期待补') + '</div></div></div>';
       }
     }
     box.innerHTML = html;
