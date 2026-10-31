@@ -16,7 +16,7 @@ comments: false
   server="tencent"
   type="playlist"
   id="9801303096"
-  api="https://api.injahow.cn/meting/"
+  api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r"
   order="random"
   volume="0.7"
   list-folded="true"
