@@ -4,12 +4,12 @@
 
 # Site
 title: Nextf1sh の Blog
-subtitle: ''
-description: ''
+subtitle: '随便写点'
+description: '看书、看片、想事情的地方'
 keywords:
 author: Nextf1sh
-language: en
-timezone: ''
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
