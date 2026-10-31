@@ -81,7 +81,7 @@ comments: false
 #article-container .aplayer-title { font-size: 17px; font-weight: 600; }
 #article-container .aplayer-author { font-size: 13px; }
 #article-container .aplayer-time { font-size: 12px; }
-#article-container .aplayer-list { max-height: 680px; }
+#article-container .aplayer-list { max-height: 70vh; overflow-y: auto; }
 #article-container .aplayer-list ol { padding: 0; }
 #article-container .aplayer-list ol li { height: 50px; line-height: 50px; font-size: 15px; }
 #article-container .aplayer-list ol li .aplayer-list-index { font-size: 15px; }
@@ -93,7 +93,7 @@ comments: false
 }
 /* new-songs */
 .new-title { font-size: 20px; margin: 26px 0 12px; letter-spacing: 2px; }
-.new-songs { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.new-songs { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
 .new-song { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 10px;
   background: rgba(127,127,127,.08); position: relative; overflow: hidden;
   animation: nsGlow 3.6s ease-in-out infinite; }
@@ -103,10 +103,10 @@ comments: false
   0%, 100% { box-shadow: 0 0 0 rgba(255,120,160,0); }
   50% { box-shadow: 0 0 14px rgba(255,120,160,.45); }
 }
-.ns-pic { width: 56px; height: 56px; border-radius: 8px; background-size: cover; background-position: center; flex: 0 0 auto; }
+.ns-pic { width: 76px; height: 76px; border-radius: 8px; background-size: cover; background-position: center; flex: 0 0 auto; }
 .ns-meta { min-width: 0; }
-.ns-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ns-artist { font-size: 12px; opacity: .65; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ns-name { font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ns-artist { font-size: 13px; opacity: .65; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .ns-badge { position: absolute; right: 8px; top: 8px; font-size: 11px; opacity: .4; }
 @media (max-width: 768px) { .new-songs { grid-template-columns: 1fr; } }
 
