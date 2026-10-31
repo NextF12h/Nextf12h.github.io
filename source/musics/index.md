@@ -73,6 +73,125 @@ comments: false
     </div>
 </div>
 <!-- NEW-SONGS:END -->
+<!-- TOP-SONGS:BEGIN -->
+<h2 class="top-title">常听</h2>
+<div class="top-songs">
+    <div class="top-song ts-gold">
+      <div class="ts-rank">01</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=004DRfOZ4QqPmf')"></div>
+      <div class="ts-meta"><div class="ts-name">時を刻む唄</div><div class="ts-artist">Lia/VISUAL ARTS/Key Sounds Label (キー・サウンズ・レーベル)</div></div>
+      <div class="ts-count">147</div>
+    </div>
+    <div class="top-song ts-shine">
+      <div class="ts-rank">02</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=0001AKlN21C2LS')"></div>
+      <div class="ts-meta"><div class="ts-name">小さなてのひら</div><div class="ts-artist">riya</div></div>
+      <div class="ts-count">131</div>
+    </div>
+    <div class="top-song ts-shine">
+      <div class="ts-rank">03</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=0021tIXj2FLlv8')"></div>
+      <div class="ts-meta"><div class="ts-name">ツバサ</div><div class="ts-artist">若山詩音</div></div>
+      <div class="ts-count">120</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">04</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=003jDl2t0Ba4Q9')"></div>
+      <div class="ts-meta"><div class="ts-name">あんずの花</div><div class="ts-artist">すりぃ/ねね</div></div>
+      <div class="ts-count">109</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">05</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=0001AKlN21C2LS')"></div>
+      <div class="ts-meta"><div class="ts-name">潮鳴りⅡ</div><div class="ts-artist">折户伸治</div></div>
+      <div class="ts-count">97</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">06</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=003zDEQp0Pz0Aq')"></div>
+      <div class="ts-meta"><div class="ts-name">Flower Dance</div><div class="ts-artist">DJ OKAWARI</div></div>
+      <div class="ts-count">96</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">07</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=002gTwxp1Oj5XO')"></div>
+      <div class="ts-meta"><div class="ts-name">ありがとう…</div><div class="ts-artist">KOKIA</div></div>
+      <div class="ts-count">95</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">08</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=0001AKlN21C2LS')"></div>
+      <div class="ts-meta"><div class="ts-name">潮鳴り</div><div class="ts-artist">折户伸治</div></div>
+      <div class="ts-count">91</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">09</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=001QK0a22DsdBA')"></div>
+      <div class="ts-meta"><div class="ts-name">夢で逢いましょう</div><div class="ts-artist">SARD UNDERGROUND</div></div>
+      <div class="ts-count">87</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">10</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=0008wyPM36i7IV')"></div>
+      <div class="ts-meta"><div class="ts-name">星空のバラード</div><div class="ts-artist">真夏龙</div></div>
+      <div class="ts-count">86</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">11</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=000OvlWJ0vrFZp')"></div>
+      <div class="ts-meta"><div class="ts-name">空は高く風は歌う</div><div class="ts-artist">春奈るな</div></div>
+      <div class="ts-count">82</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">12</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=002Ir6Sv2lB7Wr')"></div>
+      <div class="ts-meta"><div class="ts-name">It&#x27;s only the fairy tale</div><div class="ts-artist">宮村優子</div></div>
+      <div class="ts-count">82</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">13</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=000Dy9HS1TLM8S')"></div>
+      <div class="ts-meta"><div class="ts-name">群青</div><div class="ts-artist">YOASOBI</div></div>
+      <div class="ts-count">81</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">14</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=001iuAub2NeYLk')"></div>
+      <div class="ts-meta"><div class="ts-name">春はゆく</div><div class="ts-artist">Aimer</div></div>
+      <div class="ts-count">80</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">15</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=000xZF0P0g2Ide')"></div>
+      <div class="ts-meta"><div class="ts-name">Arrietty&#x27;s Song</div><div class="ts-artist">Cécile Corbel</div></div>
+      <div class="ts-count">77</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">16</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=004KeYPT3PI6YI')"></div>
+      <div class="ts-meta"><div class="ts-name">旅人の唄</div><div class="ts-artist">大原ゆい子</div></div>
+      <div class="ts-count">76</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">17</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=004T02kD1ybahm')"></div>
+      <div class="ts-meta"><div class="ts-name">unlasting</div><div class="ts-artist">LiSA</div></div>
+      <div class="ts-count">76</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">18</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=001sq0x73JFWDG')"></div>
+      <div class="ts-meta"><div class="ts-name">spiral</div><div class="ts-artist">LONGMAN</div></div>
+      <div class="ts-count">73</div>
+    </div>
+    <div class="top-song">
+      <div class="ts-rank">19</div>
+      <div class="ts-pic" style="background-image:url('https://api.injahow.cn/meting/?server=tencent&type=pic&id=00136U1E1X08qe')"></div>
+      <div class="ts-meta"><div class="ts-name">Beyond The Time~メビウスの宇宙を越えて~</div><div class="ts-artist">TM NETWORK</div></div>
+      <div class="ts-count">72</div>
+    </div>
+</div>
+<!-- TOP-SONGS:END -->
 <link rel="stylesheet" href="/lib/APlayer.min.css">
 <style>
 #article-container .aplayer { height: 116px; margin: 18px 0; }
@@ -110,7 +229,23 @@ comments: false
 .ns-badge { position: absolute; right: 8px; top: 8px; font-size: 11px; opacity: .4; }
 @media (max-width: 768px) { .new-songs { grid-template-columns: 1fr; } }
 
-</style>
+/* top-songs */
+.top-title { font-size: 20px; margin: 26px 0 12px; letter-spacing: 2px; }
+.top-songs { display: flex; flex-direction: column; gap: 8px; }
+.top-song { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 10px;
+  background: rgba(127,127,127,.08); position: relative; overflow: hidden; }
+.ts-rank { width: 28px; font-size: 15px; opacity: .55; font-variant-numeric: tabular-nums; }
+.ts-pic { width: 52px; height: 52px; border-radius: 8px; background-size: cover; background-position: center; flex: 0 0 auto; }
+.ts-meta { min-width: 0; flex: 1; }
+.ts-name { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-artist { font-size: 12px; opacity: .65; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-count { font-size: 15px; font-weight: 700; opacity: .8; }
+.ts-shine::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.22) 50%, transparent 70%);
+  transform: translateX(-100%); animation: tsSweep 3.4s ease-in-out infinite; }
+.ts-gold { background: linear-gradient(100deg, rgba(255,210,120,.22), rgba(255,140,90,.16)); }
+.ts-gold .ts-rank, .ts-gold .ts-count { color: #d98a2b; opacity: 1; }
+@keyframes tsSweep { 0% { transform: translateX(-100%); } 55%, 100% { transform: translateX(100%); } }</style>
 <script src="/lib/APlayer.min.js"></script>
 <script src="/lib/Meting.min.js"></script>
 
