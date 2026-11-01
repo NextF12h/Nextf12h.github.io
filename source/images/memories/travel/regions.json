@@ -1,20 +1,50 @@
 [
  {
+  "slug": "shandong",
+  "name": "山东",
+  "count": 25,
+  "ico": "⛰️"
+ },
+ {
   "slug": "japan",
   "name": "日本",
   "count": 22,
   "ico": "🇯🇵"
  },
  {
+  "slug": "hunan",
+  "name": "湖南",
+  "count": 16,
+  "ico": "🍲"
+ },
+ {
   "slug": "shanghai",
   "name": "上海",
-  "count": 8,
+  "count": 12,
   "ico": "🏙️"
+ },
+ {
+  "slug": "sichuan",
+  "name": "四川",
+  "count": 8,
+  "ico": "📍"
  },
  {
   "slug": "guangxi",
   "name": "广西",
   "count": 7,
   "ico": "🌿"
+ },
+ {
+  "slug": "qinghai",
+  "name": "青海",
+  "count": 3,
+  "ico": "📍"
+ },
+ {
+  "slug": "fujian",
+  "name": "福建",
+  "count": 2,
+  "ico": "📍"
  }
 ]
