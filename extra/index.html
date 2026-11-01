@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>extra | Nextf1sh の Blog</title><meta name="author" content="Nextf1sh"><meta name="copyright" content="Nextf1sh"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=".mem-month { margin: 26px 0 10px; font-size: 17px; letter-spacing: 3px; opacity: .6; } .mem-item { display: flex; gap: 14px; margin: 14px 0; align-items: flex-start; } .mem-time { flex: 0 0 92px;">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>extra | Nextf1sh の Blog</title><meta name="author" content="Nextf1sh"><meta name="copyright" content="Nextf1sh"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=".gate { max-width: 420px; margin: 80px auto; text-align: center; } .gate input { width: 100%%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(127,127,127,.4);   background: transp">
 <meta property="og:type" content="website">
 <meta property="og:title" content="extra">
 <meta property="og:url" content="https://nextf12h.github.io/extra/index.html">
 <meta property="og:site_name" content="Nextf1sh の Blog">
-<meta property="og:description" content=".mem-month { margin: 26px 0 10px; font-size: 17px; letter-spacing: 3px; opacity: .6; } .mem-item { display: flex; gap: 14px; margin: 14px 0; align-items: flex-start; } .mem-time { flex: 0 0 92px;">
+<meta property="og:description" content=".gate { max-width: 420px; margin: 80px auto; text-align: center; } .gate input { width: 100%%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(127,127,127,.4);   background: transp">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/07/21/1JBby7orZd4NfUX.jpg">
 <meta property="article:published_time" content="2026-11-01T04:10:00.000Z">
-<meta property="article:modified_time" content="2026-11-01T04:11:42.708Z">
+<meta property="article:modified_time" content="2026-11-01T04:16:25.121Z">
 <meta property="article:author" content="Nextf1sh">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2023/07/21/1JBby7orZd4NfUX.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://nextf12h.github.io/extra/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
@@ -189,26 +189,42 @@
 
 
 <style>
+.gate { max-width: 420px; margin: 80px auto; text-align: center; }
+.gate input { width: 100%%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(127,127,127,.4);
+  background: transparent; color: inherit; font-size: 16px; box-sizing: border-box; }
+.gate button { margin-top: 12px; width: 100%%; padding: 12px; border-radius: 10px; border: 0;
+  background: rgba(127,127,127,.2); color: inherit; font-size: 16px; cursor: pointer; }
+.gate .hint { margin-top: 10px; font-size: 12px; opacity: .5; }
 .mem-month { margin: 26px 0 10px; font-size: 17px; letter-spacing: 3px; opacity: .6; }
 .mem-item { display: flex; gap: 14px; margin: 14px 0; align-items: flex-start; }
 .mem-time { flex: 0 0 92px; font-size: 12px; opacity: .55; padding-top: 6px; }
 .mem-card { flex: 1; border-radius: 12px; overflow: hidden; background: rgba(127,127,127,.07); }
-.mem-card img { width: 100%; display: block; }
+.mem-card img { width: 100%%; display: block; }
 .mem-date { padding: 8px 12px; font-size: 13px; opacity: .6; }
 .mem-empty { padding: 40px 0; opacity: .55; }
 </style>
 
-<div id="mem-list"><div class="mem-empty" id="mem-empty">正在翻……</div></div>
+<div id="gate" class="gate">
+  <input id="pw" type="password" placeholder="口令" autocomplete="off">
+  <button id="go">进去</button>
+  <div class="hint" id="hint"></div>
+</div>
+<div id="mem-list" style="display:none"></div>
 
 <script>
-(async function () {
+const HASH = '2a9644a5b5a50930209190cbdb71dedac4c3972ee466369ad84910ee2733d28e';
+async function sha(s) {
+  const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join('');
+}
+async function load() {
+  document.getElementById('gate').style.display = 'none';
   const box = document.getElementById('mem-list');
-  const tip = document.getElementById('mem-empty');
-  const CAT = 'adult';
+  box.style.display = '';
   try {
-    const r = await fetch('/images/memories/' + CAT + '/index.json?t=' + Date.now());
+    const r = await fetch('/images/memories/adult/index.json?t=' + Date.now());
     const rows = await r.json();
-    if (!rows.length) { tip.textContent = '还没有。'; return; }
+    if (!rows.length) { box.innerHTML = '<div class="mem-empty">还没有。</div>'; return; }
     rows.sort((a, b) => ((b.date || '') < (a.date || '') ? -1 : (b.date || '') > (a.date || '') ? 1 : 0));
     const groups = {};
     for (const it of rows) {
@@ -220,12 +236,21 @@
       html += '<div class="mem-month">' + (m === '未标日期' ? m : m.replace('-', ' 年 ') + ' 月') + '</div>';
       for (const it of groups[m]) {
         html += '<div class="mem-item"><div class="mem-time">' + (it.date ? it.date.slice(11) : '') + '</div>' +
-          '<div class="mem-card"><img loading="lazy" src="/images/memories/' + CAT + '/' + it.file + '" alt="">' +
+          '<div class="mem-card"><img loading="lazy" src="/images/memories/adult/' + it.file + '" alt="">' +
           '<div class="mem-date">' + (it.date || '') + '</div></div></div>';
       }
     }
     box.innerHTML = html;
-  } catch (e) { tip.textContent = '没取到。'; }
+  } catch (e) { box.innerHTML = '<div class="mem-empty">没取到。</div>'; }
+}
+(async function () {
+  if (localStorage.getItem('extra_ok') === HASH) return load();
+  document.getElementById('go').onclick = async () => {
+    const v = document.getElementById('pw').value;
+    if (await sha(v) === HASH) { localStorage.setItem('extra_ok', HASH); load(); }
+    else { document.getElementById('hint').textContent = '不对。'; }
+  };
+  document.getElementById('pw').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('go').click(); });
 })();
 </script>
 
@@ -244,4 +269,4 @@
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-11-01T04:11:54.419Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2020 - 2026 By Nextf1sh</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-11-01T04:16:39.290Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2020 - 2026 By Nextf1sh</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
