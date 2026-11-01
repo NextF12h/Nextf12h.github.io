@@ -31,7 +31,7 @@ comments: false
 <div id="mem-list" style="display:none"></div>
 
 <script>
-const HASH = '2a9644a5b5a50930209190cbdb71dedac4c3972ee466369ad84910ee2733d28e';
+const HASH = 'be6c01489f43edcbdb3aa389864cb4b7864226f0e5385dcb21cb7a4dd758096f';
 async function sha(s) {
   const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
   return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join('');
