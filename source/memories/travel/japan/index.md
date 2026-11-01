@@ -29,8 +29,8 @@ comments: false
   try {
     const r = await fetch('/images/memories/' + CAT + '/index.json?t=' + Date.now());
     const rows = await r.json();
-    if (!rows.length) { tip.textContent = '这一类还没有照片。'; return; }
-    rows.sort((a, b) => ((b.date || '') < (a.date || '') ? -1 : (b.date || '') > (a.date || '') ? 1 : 0));
+    if (!rows.length) { tip.textContent = '还没有照片。'; return; }
+    rows.sort((a, b) => ((b.date || '') > (a.date || '') ? 1 : (b.date || '') < (a.date || '') ? -1 : 0));
     const groups = {};
     for (const it of rows) {
       const m = it.date ? it.date.slice(0, 7) : '未标日期';
